@@ -43,58 +43,33 @@ header .top-menu{
 /*--------------------------*/
 
 form{
+	padding: 30px 30px 15px 30px;
 	box-sizing: border-box;
-	width: 85%;
+	width: 90%;
+	max-width: 1000px;
 	border: 2px solid red;
 	margin: 20px auto;
 }
 
-/*tipo de manuten��o*/
-.Tipo_manutencao h2{
-	margin: 15px 0;
-}
+/*tipo de manutenção*/
 
 .Tipo_manutencao{
-	margin: 0 auto; 
-	width: 90%;
+	width: 50%;
 	text-align: center;
+	float: left;
 }
 
-.Tipo_manutencao .Tipo_manutencao-flex{
-	display: flex;
-	flex-wrap: wrap;
-}
-
-form .T_manut{
-	padding-bottom: 7px;
-	width: 25%;
-}
-
-.Tipo_manutencao input[type=text]{
-	width: 120px;
-}
 /*-----------------------------*/
-
-.performace-terceiros{
-	display: flex;
-	border-top: 2px solid grey;
-	align-items: center;
-	
-}
 
 /*terceiros*/
 .terceiros{
-	align-self: center;
-	width: 40%;
+	width: 50%;
+	border-left: 2px solid gray;
 	box-sizing: border-box;
-	padding: 0 10px;
-	margin:5px auto;
+	float: right;
+	text-align: center;
 }
 
-.terceiros .terceiros-setor{
-	height: 35%;
-	margin-top: 10px;
-}
 /*-------------------------------*/
 
 /*relatorio tecnico*/
@@ -160,7 +135,7 @@ form .T_manut{
 /*----------------------------*/
 
 .descricao-servico{
-	margin: 0 auto;
+	margin: 20px auto;
 	position: relative;
 	bottom: 15px;
 	text-align: center;
@@ -217,22 +192,15 @@ form .T_manut{
 /*responsivo*/
 
 @media screen and (max-width:1005px){
-	form .T_manut{
-		width: 33.3%;
-	}
-	.Tipo_manutencao .T_manut:nth-child(8){
+	form .Tipo_manutencao{
 		width: 100%;
-		text-align: center;
-	}
-
-	.performace-terceiros{
-		flex-wrap: wrap;
+		border-bottom: 2px solid gray;
+		padding-bottom: 30px;
 	}
 
 	.terceiros{
-		margin: 0 auto;
+		padding: 20px 0;
 		width: 100%;
-		padding: 0 0;
 		border-left:0;
 		text-align: center;
 	}
