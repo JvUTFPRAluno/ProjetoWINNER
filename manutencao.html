@@ -20,40 +20,31 @@
 		</div><!--top-menu-->	
 	</header>	
 		<form class="relatorio">
-			<div class="Tipo_manutencao">	
+			<div class="Tipo_manutencao">
 				<h2>Tipo de manutenção</h2>
-				<div class="Tipo_manutencao-flex">
-				<div class="T_manut"><input type="checkbox" name="tipo_manutencao[]" required>
-				<label>C. emergencial</label></div>
-				<div class="T_manut"><input type="checkbox" name="tipo_manutencao[]">
-				<label>C. programada</label></div>
-				<div class="T_manut"><input type="checkbox" name="tipo_manutencao[]">
-				<label>Ajuste operacional</label></div>
-				<div class="T_manut"><input type="checkbox" name="tipo_manutencao[]">
-				<label>Melhoria</label></div>
-				<div class="T_manut"><input type="checkbox" name="tipo_manutencao[]">
-				<label>Predial</label></div>
-				<div class="T_manut"><input type="checkbox" name="tipo_manutencao[]">
-				<label>preventiva</label></div>
-				<div class="T_manut"><label>outro</label>
-				<input type="text" name="tipo_manutencao"></div>
-				<div class="clear"></div>
-				</flex><!--Tipo_manutencao-flex-->
+				<select required>
+					<option value='' disabled selected>--</option>
+					<option value="C. emergencial">C. emergencial</option>
+					<option value="C. programada">C. programada</option>
+					<option value="Ajuste operacional">Ajuste operacional</option>
+					<option value="Melhoria">Melhoria</option>
+					<option value="Predial">Predial</option>
+					<option value="preventiva">preventiva</option>
+				</select>
 			</div><!--Tipo_manutencao-->
-			<div class="performace-terceiros">
 			<div class="terceiros">
-				<div class="terceiros-setor">
-					<label>Manutenção realizada com 3°</label>
-					<input type="radio" value="sim_t" name="opt"><label>sim</label>
-					<input type="radio" value="nao_t" name="opt"><label>não</label>
-				</div><!--terceiros-setor-->
-				<div class="terceiros-setor">
-					<label>Empresa/ Profissional</label>
-					<input type="text" name="empresa">
-				</div><!--terceiros-setor-->
+				<h2>Terceiros</h2>
+					<div>
+						<label>Manutenção realizada com 3°</label>
+						<input type="radio" value="sim_t" name="opt"><label>sim</label>
+						<input type="radio" value="nao_t" name="opt"><label>não</label>
+					</div>
+					<div>
+						<label>Empresa/ Profissional</label>
+						<input type="text" name="empresa">
+					</div>
 			</div><!--terceiros-->
-			</div><!--performace-terceiros-->
-			<div class="clear"></div>
+			<div class="clear"></div><!--clear-->
 			<div class="relatorio_tecnico">
 				<h2>Relatório Técnico</h2>
 				<div class="topico">
