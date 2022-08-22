@@ -146,93 +146,46 @@ form input[type=reset]:hover{
 
 /*ordens*/
 
-.registro-single{
-	max-width:1000px;
+.registro-ordens{
+	max-width: 1280px;
+	width: 100%;
 	margin: 0 auto;
-	border: 2px solid red;
-	margin-top: 40px;
-	padding: 10px 10px 0 10px;
-	box-sizing: border-box;
+}
+
+.registro-ordens table{
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.registro-ordens table tr, .registro-ordens table td, .registro-ordens table th{
+	border: 1px solid black; 
+}
+
+.registro-ordens table th{
 	background-color: #ccc;
-	overflow: hidden;
-	transition:0.7s;
 }
 
-.dados-requisitante{cursor: pointer;}
-
-.registro-single > .dados-requisitante{
-	display: flex;
-	flex-wrap: wrap;
+.registro-ordens table .id{
+	width: 3%;
+	padding: 10px;
 }
 
-.dados-requisitante > .dados-conteiner, .dados-requisitante > .descricao-hora, .primeiro-terco, .tempo-perf{
-	display: flex;	
-	width: 100%;
+.registro-ordens table .data{
+	width: 10%;
+	padding: 10px;
 }
 
-.dados-conteiner-conteudo{
-	display: flex;
-	width: calc(100% / 3);
-	flex-wrap: wrap;
+.registro-ordens table .ocor{
+	width: 45%;
 }
 
-.dados-conteiner-conteudo h4, .descricao-hora h4{
-	padding-right: 7px;
+.registro-ordens table .acoes{
+	padding: 10px;
 }
 
-.preenchimento-requisicao{
-	width: 100%;
-	border-top: 2px solid red;
-	margin-top: 20px;
-}
-
-.primeiro-terco{
-	padding: 10px 0;
-	border-bottom: 2px solid black;
-}
-
-.descricao-hora{
-	margin-top: 10px;
-}
-
-.data-requisicao{
-	margin: 0 auto;
-	text-align: center;
-	display:flex;
-}
-
-.title-perf{
-	width: 100%;
-}
-
-.tempo-perf, .title-perf{
-	text-align: center;
-}
-
-.tempo-perf p{
-	width: 50%;
-}
-
-.segundo-terco{
-	padding: 10px 0;
-	display: flex;
-	flex-wrap: wrap;
-	border-bottom: 2px solid black;
-}
-
-.relatorio-linha{
-	display: flex;
-	width: 50%;
-}
-
-.relatorio-linha p{
-	padding: 0 7px;
-}
-
-.terceiro-terco h4{text-align: center;}
-
-.terceiro-terco{
-	margin:10px 10px;
+.registro-ordens table td a{
+	padding: 5px;
 }
 
 /*OS*/
@@ -251,6 +204,68 @@ form input[type=reset]:hover{
 	width:27%;
 	padding: 2px 2%;
 } 
+
+/*relatorio*/
+
+section.requisitante{
+	width: 100%;
+	max-width: 1280px;
+	margin: 30px auto;
+}
+
+.OS{
+	width: 100%;
+	max-width: 1280px;
+	margin: 30px auto;
+}
+
+form.relatorio{
+	padding: 40px;
+}
+
+.OS .Tipo_manutencao, .terceiros, .relatorio_tecnico{
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid gray;
+
+}
+
+.relatorio_tecnico h2{
+	text-align: center;
+}
+
+.relatorio_tecnico{
+	text-align: left;
+}
+
+.relatorio_tecnico label{
+	width: 150px;
+}
+
+.parada_maquina label{
+	width: 50px;
+}
+
+.relatorio_tecnico input[type=text]{
+	width: 100%;
+}
+
+.topico{
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgb(114, 114, 114);
+}
+
+.relatorio_tecnico .conteiner-parada{
+	padding: 0 40px;
+}
+
+.OS textarea{
+	width: 100%;
+}
+/*************/
+
+
+
 
 /*teste*/
 
