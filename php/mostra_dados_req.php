@@ -1,7 +1,11 @@
 <?php
     include 'config.php';
 
-    $id = $_GET['id'];
+	$id = $_GET['id'];
+	$tempoInicio = date('Y-m-d H:i');
+
+	$sql2 = "UPDATE ordemservico SET `dataInicio` = '$tempoInicio' WHERE `id` = '$id'";
+	mysqli_query($conn, $sql2);
 
     $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";
     $result = mysqli_query($conn, $sql);

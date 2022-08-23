@@ -1,5 +1,4 @@
 <?php 
-    include '../parts/header.php'
     include 'config.php';
 
     $nome = $_POST['nome'];
@@ -14,6 +13,6 @@
     mysqli_query($conn, $sql);
 
     mysqli_close($conn);
-    header('Location: '. '../Usuarios.html');
+    header('Location: '. '../Usuario.php');
     die();
 ?>
