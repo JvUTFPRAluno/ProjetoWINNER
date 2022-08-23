@@ -2,6 +2,7 @@
 	margin:0;
 	padding:0;
 	font-family: calibri;
+	box-sizing: border-box;
 }
 
 .clear{
@@ -114,19 +115,19 @@ form textarea{
 	resize: none;
 }
 
-form button, form input[type=reset]{
+form input[type=submit], form input[type=reset]{
 	margin-top: 10px;
-	width: 15%;
+	width: 120px;
 	height: 30px;
 }
 
-form button{
+form input[type=submit]{
 	background-color: lightgreen;
 	border: 0;
 	transition: 0.7s;
 }
 
-form button:hover{
+form input[type=submit]:hover{
 	background-color: green;
 	border-radius: 10px;
 	cursor: pointer;
@@ -149,42 +150,43 @@ form input[type=reset]:hover{
 .registro-ordens{
 	max-width: 1280px;
 	width: 100%;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 
-.registro-ordens table{
+table{
 	width: 100%;
 	border-collapse: collapse;
 	text-align: center;
+	
 }
 
-.registro-ordens table tr, .registro-ordens table td, .registro-ordens table th{
-	border: 1px solid black; 
+table tr, table td, table th{
+	border: 1px solid black;
 }
 
-.registro-ordens table th{
+table th{
 	background-color: #ccc;
 }
 
-.registro-ordens table .id{
+table .id{
 	width: 3%;
 	padding: 10px;
 }
 
-.registro-ordens table .data{
+table .data{
 	width: 10%;
 	padding: 10px;
 }
 
-.registro-ordens table .ocor{
+table .ocor{
 	width: 45%;
 }
 
-.registro-ordens table .acoes{
+table .acoes{
 	padding: 10px;
 }
 
-.registro-ordens table td a{
+table td a{
 	padding: 5px;
 }
 
@@ -230,6 +232,12 @@ form.relatorio{
 
 }
 
+.terceiros input[type=text]{
+	height: 30px;
+	line-height: 30px;
+	padding-left: 7px;
+}
+
 .relatorio_tecnico h2{
 	text-align: center;
 }
@@ -248,6 +256,9 @@ form.relatorio{
 
 .relatorio_tecnico input[type=text]{
 	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 7px;
 }
 
 .topico{

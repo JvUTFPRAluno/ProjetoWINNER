@@ -1,5 +1,6 @@
 <?php
-echo('<!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -15,9 +16,10 @@ echo('<!DOCTYPE html>
 			<div class="item"><a href="index.php">Inicio</a></div>
 			<div class="item"><a href="Usuario.php">Usuario</a></div>
 			<div class="item"><a href="ordens.php">Ordens</a></div>
-			<div class="item"><a href="manutencao.php">Manutenção</a></div>
+			<div class="item"><a href="ordensConcluidas.php">Concluidas</a></div>
 			<div class="item last bottom_line"><a href="#">Suporte</a></div>
 			<div class="clear"></div>
 		</div><!--top-menu-->	
-	</header>');
+	</header>
+<?php
 ?>
