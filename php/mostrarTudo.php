@@ -50,8 +50,8 @@
             <div class="parada_maquina">
                 <label>Parou a Maquina?</label>
                 <div class="conteiner-parada">
-                    <input type="radio" value="sim_p" name="h_parada"><label>Sim</label disabled>
-                    <input type="radio" value="nao_p" name="h_parada"><label>Não</label disabled>
+                    <input type="radio" value="sim_p" name="h_parada" disabled><label>Sim</label disabled>
+                    <input type="radio" value="nao_p" name="h_parada" disabled><label>Não</label disabled>
                     <input type="time" name="tempo_parada" value="<?php echo $linha['tempo_parada']?>" disabled>
                 </div><!--conteiner-parada-->
             </div>
