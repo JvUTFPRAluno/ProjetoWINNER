@@ -1,4 +1,7 @@
-<?php include'parts/header.php'?>
+<?php 
+	include 'parts/header.php';
+	include 'php/verifica_sessao.php';
+?>
 	<div class="registro-ordens" id="registros_ordens">
 		<table>
 			<tr>

@@ -274,9 +274,55 @@ form.relatorio{
 	width: 100%;
 }
 /*************/
+/*****LOGIN*****/
+.login{
+	padding: 0 2%;
+	color: white;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.login form{
+	border-radius: 10px;
+	display: table;
+	width: 100%;
+	max-width: 500px;
+	margin: auto auto;
+
+}
+
+.login form div{
+	padding-bottom: 30px;
+}
+
+.login form div p{
+	margin-bottom: 10px;
+}
 
 
+.login form div input[type=text], .login form input[type=password]{
+	background-color: black;
+	border: 1px solid white;
+	color: white;
+	width: 90%;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 10px;
+	padding-left: 7px;
+}
 
+.login form input[type=submit]{
+	margin: 10px 20px;
+}
+
+.login form input[type=reset]{
+	background: black;
+	border: 1px solid white;
+	color: white;
+}
 
 /*teste*/
 

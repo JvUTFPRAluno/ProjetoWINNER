@@ -1,4 +1,8 @@
-<?php include'parts/header.php'?>
+<?php 
+
+	include 'parts/header.php';
+	include 'php/verifica_sessao.php';
+?>
 
 <?php include'php/mostra_dados_req.php'?>
 <div class="OS">
