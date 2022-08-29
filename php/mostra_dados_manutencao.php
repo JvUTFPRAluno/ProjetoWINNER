@@ -3,11 +3,18 @@
 
     $id = $_GET['id'];//pega o id via GET
 
+<<<<<<< HEAD
+    $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";
+    $result = mysqli_query($conn, $sql);
+    $linha = mysqli_fetch_array($result);
+    
+=======
     $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";//query que pega os dados onde a coluna id = '$id'
     $result = mysqli_query($conn, $sql);//executa a query e adiciona a varivel '$result' 
     $linha = mysqli_fetch_array($result);//adiciona os dados da variavel '$result' na varivel '$linha' como um array 
 
     //adiciona os dados ao formulario para que possam ser editados
+>>>>>>> 8b79d92eda053fc7cbcb704fb7e3914a51c2de21
 ?>
 
 <div class="OS">
@@ -69,6 +76,5 @@
         </div><!--actions-->
     </form><!--relatorio-->
 </div><!--OS-->
-
 <?php
 ?>

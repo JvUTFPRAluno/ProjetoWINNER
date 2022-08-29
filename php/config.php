@@ -8,4 +8,11 @@
 	
 	//tenta fazer a conexão caso falhe retorna um erro de conexão.
 	$conn = mysqli_connect($servername,$username,$senha,$database) or die('ERRO!!' . mysqli_connect_error());
+<<<<<<< HEAD
+
+	date_default_timezone_set('America/Sao_Paulo');
+
 ?>
+=======
+?>
+>>>>>>> 8b79d92eda053fc7cbcb704fb7e3914a51c2de21

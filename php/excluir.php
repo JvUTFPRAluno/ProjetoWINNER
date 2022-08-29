@@ -1,5 +1,12 @@
 <?php
+<<<<<<< HEAD
+    include 'config.php';
+    require_once  'verifica_sessao';
+
+    verifica_conectado(3);
+=======
     include 'config.php';//inicia o banco de dados
+>>>>>>> 8b79d92eda053fc7cbcb704fb7e3914a51c2de21
 
     $id = $_GET['id'];//pega o id via GET
 

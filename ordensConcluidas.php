@@ -12,7 +12,7 @@
 		<th class="acoes">Ações</th>
 	</tr>
 	<?php
-		include 'php/consultaConcluido.php';
+		require_once 'php/concluidos.php';	
 	?>
 </table>
 </div>

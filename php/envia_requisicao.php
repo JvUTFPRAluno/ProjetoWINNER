@@ -1,5 +1,12 @@
 <?php
+<<<<<<< HEAD
+    require 'config.php';
+    require_once 'verifica_sessao.php';
+
+    verifica_conectado(1);
+=======
     include 'config.php';//inicia o banco de dados
+>>>>>>> 8b79d92eda053fc7cbcb704fb7e3914a51c2de21
 
 
     //atribui os dados POST as variveis 
