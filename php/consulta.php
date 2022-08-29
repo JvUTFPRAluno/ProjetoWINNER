@@ -1,14 +1,15 @@
 <?php 
-    include 'config.php';
-    include 'verifica_sessao.php';
+    include 'config.php';//efetua a conexão com o banco de dados
+    include 'verifica_sessao.php';//adiciona o sistema de sessão no pagina
 
-    $previlegio = $_SESSION['USUARIOPREV'];
+    $previlegio = $_SESSION['USUARIOPREV'];//atribui o previlegio do usuario a variavel '$previlegio'
 
-    $sql = "SELECT * FROM ordemservico WHERE concluido = '0' ";
-    $dados = mysqli_query($conn,$sql);
+    $sql = "SELECT * FROM ordemservico WHERE concluido = '0' ";//query que procura no banco de dados ordens de serviço que ainda não estão concluidas
+    $dados = mysqli_query($conn,$sql);//executa a query e atribui o resultado a variavel '$dados'
 
-    while($row = mysqli_fetch_array($dados)){
+    while($row = mysqli_fetch_array($dados)){//enquanto houver dados na array '$dados', atribuiu o valor linha por linha a variavel '$row'
 ?>
+    //cria uma linha na table onde é chamado esse procedimento preenchendo com os dados atuais de '$row'
     <tr>
         <td><?php echo $row['id'] ?></td>
         <td><?php echo $row['nomeRequisitante'] ?></td>
@@ -22,5 +23,5 @@
     </tr>
 <?php
     }
-    mysqli_close($conn);
+    mysqli_close($conn);//fecha a conexão com o banco de dados
 ?>
