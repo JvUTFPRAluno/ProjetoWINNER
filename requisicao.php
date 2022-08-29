@@ -1,7 +1,6 @@
 <?php 
-
-	include 'parts/header.php';
-	include 'php/verifica_sessao.php';
+	include 'parts/header.php';//adiciona o cabeçalho ao site 
+	include 'php/verifica_sessao.php';//verifica a sessão
 ?>
 
 <?php include'php/mostra_dados_req.php'?>
@@ -66,4 +65,4 @@
 		</form><!--relatorio-->
 </div><!--OS-->
 
-<?php include'parts/footer.php'?>
+<?php include'parts/footer.php';//adiciona o rodapé da pagina?>
