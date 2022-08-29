@@ -1,12 +1,15 @@
 <?php 
-    include 'config.php';
+    include 'config.php';//inicia o banco de dados
 
-	$id = $_GET['id'];
+    $id = $_GET['id'];//pega o id via GET
 
-    $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-    $linha = mysqli_fetch_array($result);
+    $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";//query que pega os dados onde a coluna id = '$id'
+    $result = mysqli_query($conn, $sql);//executa a query e adiciona a varivel '$result' 
+    $linha = mysqli_fetch_array($result);//adiciona os dados da variavel '$result' na varivel '$linha' como um array 
+
+    //adiciona os dados ao formulario para que possam ser editados
 ?>
+
 <div class="OS">
 <form class="relatorio" method="POST" action="php/edita_requisicao.php">
         <input type="text" name="id" value="<?php echo $linha['id']; ?>" style="display: none;";>
