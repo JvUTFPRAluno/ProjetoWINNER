@@ -8,8 +8,9 @@
     $dados = mysqli_query($conn,$sql);//executa a query e atribui o resultado a variavel '$dados'
 
     while($row = mysqli_fetch_array($dados)){//enquanto houver dados na array '$dados', atribuiu o valor linha por linha a variavel '$row'
-?>
+    
     //cria uma linha na table onde é chamado esse procedimento preenchendo com os dados atuais de '$row'
+?>
     <tr>
         <td><?php echo $row['id'] ?></td>
         <td><?php echo $row['nomeRequisitante'] ?></td>
