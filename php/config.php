@@ -7,7 +7,7 @@
 	$senha = "";//senha do usuario
 	
 	//tenta fazer a conexão caso falhe retorna um erro de conexão.
-	$conn = mysqli_connect($servername,$username,$senha,$database) or die('ERRO!!' . mysqli_connect_error());D
+	$conn = mysqli_connect($servername,$username,$senha,$database) or die('ERRO!!' . mysqli_connect_error());
 
 	date_default_timezone_set('America/Sao_Paulo');
 
