@@ -43,4 +43,3 @@
 		</table>
 	</div><!--registro-ordens-->
 <?php include'parts/footer.php'?>// adiciona o rodapé da pagina
-

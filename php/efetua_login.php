@@ -18,12 +18,6 @@
         print('<script>alert("Codigo e/ou Senha incorretos!!!");</script>');
         header("Location: ../login.php");
         exit;
-    if(mysqli_num_rows($result) != 1){//verifica se existe correspondencia('se existir nenhuma ou mais de uma retorna um erro e redireciona para o login')
-        
-        echo('<script>alert("Codigo e/ou Senha incorretos!!!");</script>');//exibe um alerta sobre o erro no login
-        header("Location: ../login.php");//redireciona para o login
-        exit;//mata o codigo 
-    
     }
 
     $resultado = mysqli_fetch_array($result);//se as condições se cumprirem adiciona os dados a variavel '$resultado'

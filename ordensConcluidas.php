@@ -16,5 +16,4 @@
 	?>
 </table>
 </div>
-
 <?php include'parts/footer.php'?>

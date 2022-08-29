@@ -1,9 +1,3 @@
-
-<?php
-    include 'php/config.php';
-?>
-<?php
-?>
 <!DOCTYPE html>
 <html>
 <head>

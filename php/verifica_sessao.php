@@ -1,4 +1,3 @@
-
 <?php 
 function verifica_conectado($num){
 // A sessão precisa ser iniciada em cada página diferente
