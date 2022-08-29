@@ -1,5 +1,8 @@
 <?php
-    include 'config.php';
+    require 'config.php';
+    require_once 'verifica_sessao.php';
+
+    verifica_conectado(1);
 
     $id = $_POST['id'];
     $tipo = implode(",",$_POST['tipo_manutencao']);

@@ -1,5 +1,8 @@
 <?php
     include 'config.php';
+    require_once  'verifica_sessao';
+
+    verifica_conectado(3);
 
     $id = $_GET['id'];
 

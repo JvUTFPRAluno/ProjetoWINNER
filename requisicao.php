@@ -1,10 +1,24 @@
 <?php 
 
 	include 'parts/header.php';
-	include 'php/verifica_sessao.php';
+	require_once 'php/verifica_sessao.php';
+	require_once 'php/config.php';
+
+
+	$tempoInicio = date('Y-m-d H:i');
+	$id = $_GET['id'];
+
+
+	$sql = "UPDATE ordemservico SET `dataInicio` = '$tempoInicio' WHERE `id` = '$id'";
+	mysqli_query($conn, $sql);
+
+	verifica_conectado(1);
 ?>
 
-<?php include'php/mostra_dados_req.php'?>
+<?php 
+	require_once 'php/mostra_dados_req.php';
+	dados_requisitante();
+?>
 <div class="OS">
     <form class="relatorio" method="POST" action="php/envia_requisicao.php">
             <input type="text" name="id" value="<?php echo $linha['id']; ?>" style="display: none;";>

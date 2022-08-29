@@ -12,7 +12,7 @@
     $result = mysqli_query($conn,$sql);
 
     if(mysqli_num_rows($result) != 1){
-        echo('<script>alert("Codigo e/ou Senha incorretos!!!");</script>');
+        print('<script>alert("Codigo e/ou Senha incorretos!!!");</script>');
         header("Location: ../login.php");
         exit;
     }

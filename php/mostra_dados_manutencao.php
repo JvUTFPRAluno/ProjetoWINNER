@@ -6,6 +6,7 @@
     $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";
     $result = mysqli_query($conn, $sql);
     $linha = mysqli_fetch_array($result);
+    
 ?>
 <div class="OS">
 <form class="relatorio" method="POST" action="php/edita_requisicao.php">
@@ -66,6 +67,5 @@
         </div><!--actions-->
     </form><!--relatorio-->
 </div><!--OS-->
-
 <?php
 ?>

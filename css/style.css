@@ -318,6 +318,12 @@ form.relatorio{
 	margin: 10px 20px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .login form input[type=reset]{
 	background: black;
 	border: 1px solid white;
