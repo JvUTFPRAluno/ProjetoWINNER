@@ -4,8 +4,6 @@
 	require_once 'php/consulta.php';
 
 	verifica_conectado(1);
-	include 'parts/header.php';//adiciona o cabeçalho ao site
-	include 'php/verifica_sessao.php';//verifica a sessão
 ?>
 	<div class="registro-ordens" id="registros_ordens">
 		<table>
@@ -42,4 +40,4 @@
 			?>
 		</table>
 	</div><!--registro-ordens-->
-<?php include'parts/footer.php'?>// adiciona o rodapé da pagina
+<?php include'parts/footer.php'?>
