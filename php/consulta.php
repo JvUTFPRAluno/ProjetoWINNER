@@ -10,8 +10,17 @@ function n_concluidos(){
     include 'config.php';
     $sql = "SELECT * FROM ordemservico WHERE concluido = '0' ";
     $dados = mysqli_query($conn,$sql);
+    include 'config.php';//efetua a conexão com o banco de dados
+    include 'verifica_sessao.php';//adiciona o sistema de sessão no pagina
 
-    while($row = mysqli_fetch_array($dados)){
+    $previlegio = $_SESSION['USUARIOPREV'];//atribui o previlegio do usuario a variavel '$previlegio'
+
+    $sql = "SELECT * FROM ordemservico WHERE concluido = '0' ";//query que procura no banco de dados ordens de serviço que ainda não estão concluidas
+    $dados = mysqli_query($conn,$sql);//executa a query e atribui o resultado a variavel '$dados'
+
+    while($row = mysqli_fetch_array($dados)){//enquanto houver dados na array '$dados', atribuiu o valor linha por linha a variavel '$row'
+    
+    //cria uma linha na table onde é chamado esse procedimento preenchendo com os dados atuais de '$row'
 ?>
     <tr>
         <td><?php echo $row['id'] ?></td>

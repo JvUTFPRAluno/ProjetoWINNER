@@ -3,7 +3,10 @@
     require_once 'verifica_sessao.php';
 
     verifica_conectado(1);
+    include 'config.php';//inicia o banco de dados
 
+
+    //atribui os dados POST as variveis 
     $id = $_POST['id'];
     $tipo = implode(",",$_POST['tipo_manutencao']);
     $terceiros = $_POST['terceiros'];
@@ -15,12 +18,14 @@
     $solucao = $_POST['solucao'];
 
 
-    echo($solucao);
+    //echo($solucao);debug
+
+    //query que adiciona os dados enviados pelo usuario na solução da ordem de serviço
     $sql = "UPDATE `ordemservico` SET `tipoManutencao`='$tipo',`nomeManutencao`='$nome',`dataTermino`='$dataTermino',`parteProblema`='$parte',
     `motivoProblema`='$motivo',`solucao`='$solucao',`tempo_parada`='$parada',`nomeTerceiros`='$terceiros',`concluido`='1' WHERE `id`= '$id'";
-    mysqli_query($conn, $sql);
+    mysqli_query($conn, $sql);//executa a query
 
-    mysqli_close($conn);
-    header('Location: '. '../ordens.php');
-    die();
+    mysqli_close($conn);//fecha o banco de dados
+    header('Location: '. '../ordens.php');//redireciona para ordens
+    die();// mata o codigo
 ?>

@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 	include 'parts/header.php';
 	require_once 'php/verifica_sessao.php';
 	require_once 'php/config.php';
@@ -13,6 +12,8 @@
 	mysqli_query($conn, $sql);
 
 	verifica_conectado(1);
+	include 'parts/header.php';//adiciona o cabeçalho ao site 
+	include 'php/verifica_sessao.php';//verifica a sessão
 ?>
 
 <?php 
@@ -80,4 +81,4 @@
 		</form><!--relatorio-->
 </div><!--OS-->
 
-<?php include'parts/footer.php'?>
+<?php include'parts/footer.php';//adiciona o rodapé da pagina?>
