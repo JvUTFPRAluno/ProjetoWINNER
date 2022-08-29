@@ -1,6 +1,6 @@
 <?php 
-	include 'parts/header.php';
-	include 'php/verifica_sessao.php';
+	include 'parts/header.php';//adiciona o cabeçalho ao site
+	include 'php/verifica_sessao.php';//verifica a sessão
 ?>
 	<div class="registro-ordens" id="registros_ordens">
 		<table>
@@ -14,9 +14,9 @@
 				<th class="acoes">Ações</th>
 			</tr>
 			<?php
-				include 'php/consulta.php';
+				include 'php/consulta.php';// inclui as ordens de serviço não concluidas
 			?>
 		</table>
 	</div><!--registro-ordens-->
-<?php include'parts/footer.php'?>
+<?php include'parts/footer.php'?>// adiciona o rodapé da pagina
 
