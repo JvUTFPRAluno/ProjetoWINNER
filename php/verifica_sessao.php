@@ -18,6 +18,5 @@ function mostra_botao($num){
   if($_SESSION['USUARIOPREV']<$num){
     print('style="display:none"');
   }
-
 }
 ?>
