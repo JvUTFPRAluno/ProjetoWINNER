@@ -17,7 +17,7 @@
 			<div class="item"><a href="Usuario.php">Usuario</a></div>
 			<div class="item"><a href="ordens.php">Ordens</a></div>
 			<div class="item"><a href="ordensConcluidas.php">Concluidas</a></div>
-			<div class="item last bottom_line"><a href="php/logout.php">Suporte</a></div>
+			<div class="item last bottom_line"><a href="php/logout.php">Sair</a></div>
 			<div class="clear"></div>
 		</div><!--top-menu-->	
 	</header>
