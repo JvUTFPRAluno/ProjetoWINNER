@@ -10,8 +10,6 @@ function n_concluidos(){
     include 'config.php';
     $sql = "SELECT * FROM ordemservico WHERE concluido = '0' ";
     $dados = mysqli_query($conn,$sql);
-    include 'config.php';//efetua a conexão com o banco de dados
-    include 'verifica_sessao.php';//adiciona o sistema de sessão no pagina
 
     $previlegio = $_SESSION['USUARIOPREV'];//atribui o previlegio do usuario a variavel '$previlegio'
 

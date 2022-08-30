@@ -1,7 +1,7 @@
 <?php 
 	include 'parts/header.php';
-	require_once 'php/verifica_sessao.php';
 	require_once 'php/consulta.php';
+	require_once 'php/verifica_sessao.php';
 
 	verifica_conectado(1);
 ?>
@@ -36,7 +36,6 @@
 			</tr>
 			<?php
 				concluidos();
-				include 'php/consulta.php';// inclui as ordens de serviço não concluidas
 			?>
 		</table>
 	</div><!--registro-ordens-->

@@ -1,5 +1,7 @@
 <?php 
-function verifica_conectado($num){
+
+function verifica_conectado ($num){
+
 // A sessão precisa ser iniciada em cada página diferente
   if (!isset($_SESSION)) session_start();
 

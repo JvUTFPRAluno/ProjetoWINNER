@@ -12,13 +12,10 @@
 	mysqli_query($conn, $sql);
 
 	verifica_conectado(1);
-	include 'parts/header.php';//adiciona o cabeçalho ao site 
-	include 'php/verifica_sessao.php';//verifica a sessão
 ?>
 
 <?php 
 	require_once 'php/mostra_dados_req.php';
-	dados_requisitante();
 ?>
 <div class="OS">
     <form class="relatorio" method="POST" action="php/envia_requisicao.php">
