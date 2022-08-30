@@ -14,7 +14,7 @@
         <input type="text" name="id" value="<?php echo $linha['id']; ?>" style="display: none;">
         <div class="Tipo_manutencao">
             <h2>Tipo de manutenção</h2>
-            <select name="tipo_manutencao[]" readonly>
+            <select name="tipo_manutencao[]" disabled>
                 <option value="C. emergencial" <?php $linha['tipoManutencao']=='C. emergencial'?print('selected'):print('');?>>C. emergencial</option>
                 <option value="C. programada" <?php $linha['tipoManutencao']=='C. programada'?print('selected'):print('');?>>C. programada</option>
                 <option value="Ajuste operacional" <?php $linha['tipoManutencao']=='Ajuste operacional'?print('selected'):print('');?>>Ajuste operacional</option>
