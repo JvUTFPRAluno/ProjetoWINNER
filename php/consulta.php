@@ -34,7 +34,7 @@ function n_concluidos(){
 }
 function concluidos(){
     include 'config.php';
-    $sql = "SELECT * FROM ordemservico WHERE concluido = '1' ";
+    $sql = "SELECT * FROM ordemservico WHERE concluido = '1' LIMIT 20";
     $dados = mysqli_query($conn,$sql);
 
     while($row = mysqli_fetch_array($dados)){
