@@ -1,5 +1,5 @@
 <?php
-    include 'config.php';
+    require 'config.php';
     require_once 'verifica_sessao.php';
 
     verifica_conectado(2);

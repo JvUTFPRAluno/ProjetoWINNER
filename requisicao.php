@@ -41,7 +41,7 @@
 					</div>
 					<div>
 						<label>Empresa/ Profissional</label>
-						<input type="text" name="terceiros" value="null">
+						<input type="text" name="terceiros">
 					</div>
 			</div><!--terceiros-->
 			<div class="relatorio_tecnico">
@@ -63,7 +63,7 @@
 					<div class="conteiner-parada">
 						<input type="radio" value="sim_p" name="h_parada"><label>Sim</label>
 						<input type="radio" value="nao_p" name="h_parada"><label>Não</label>
-						<input type="time" name="tempo_parada">
+						<input type="time" name="tempo_parada" value="00:00">
 					</div><!--conteiner-parada-->
 				</div>
 			</div><!--relatorio_tecnico-->

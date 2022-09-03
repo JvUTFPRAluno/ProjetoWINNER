@@ -9,7 +9,9 @@
     //atribui os dados POST as variveis 
     $id = $_POST['id'];
     $tipo = implode(",",$_POST['tipo_manutencao']);
-    $terceiros = $_POST['terceiros'];
+    if(isset($_POST['terceiros'])){
+        $terceiros = $_POST['terceiros'];
+    }
     $dataTermino = date('Y-m-d H:i');
     $nome = $_POST['nome_funcionario'];
     $parte = $_POST['equipamento'];

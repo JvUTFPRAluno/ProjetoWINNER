@@ -318,20 +318,35 @@ form.relatorio{
 	margin: 10px 20px;
 }
 
-input::-webkit-outer-spin-button,
+/*input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+}*/
 
 .login form input[type=reset]{
 	background: black;
 	border: 1px solid white;
 	color: white;
 }
+/**************/
+/****filtro*****/
+form.filtrar div{
+	display: inline-block;
+	padding: 0 30px;
+	text-align: center;
+}
+
+form.filtrar div select{
+	display: block;
+}
+
+form.filtrar input[type=submit]{
+	display: block;
+	margin: 15px auto;
+}
 
 /*teste*/
-
 .item1{
 	grid-area: header;
 	background-color: black;

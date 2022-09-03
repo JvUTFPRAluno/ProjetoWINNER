@@ -4,7 +4,9 @@
     
     //atribuição das variaveis pelo metodo POST
     $nome = $_POST['nome'];
-    $linha = implode(",",$_POST['linha']);//separa os elementos de uma array por virgulas(no caso como tem apenas 1 o coverte para string)
+    if(isset($_POST['linha'])){
+        $linha = implode(",",$_POST['linha']);//separa os elementos de uma array por virgulas(no caso como tem apenas 1 o coverte para string)
+    }
     $setor = implode(",",$_POST['setor']);
     $descricao = $_POST['descricao'];
     $data = date('Y/m/d H:i');// pega a data da requisição de maneira automatica a partir do envio

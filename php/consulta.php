@@ -1,5 +1,5 @@
 <?php 
-    include 'config.php';
+    require 'config.php';
     require_once 'verifica_sessao.php';
 
     verifica_conectado(1);
@@ -33,7 +33,7 @@ function n_concluidos(){
     }
 }
 function concluidos(){
-    include 'config.php';
+    require 'config.php';
     $sql = "SELECT * FROM ordemservico WHERE concluido = '1' LIMIT 20";
     $dados = mysqli_query($conn,$sql);
 
