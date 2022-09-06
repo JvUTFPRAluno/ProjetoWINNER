@@ -13,7 +13,6 @@
 
     //adiciona os dados ao formulario para que possam ser editados
 ?>
-
 <div class="OS">
 <form class="relatorio" method="POST" action="php/edita_requisicao.php">
         <input type="text" name="id" value="<?php echo $linha['id']; ?>" style="display: none;";>
@@ -73,5 +72,7 @@
         </div><!--actions-->
     </form><!--relatorio-->
 </div><!--OS-->
+<script scr="js/scripts.js"></script>
+<script scr="js/scripts.js"></script>
 <?php
 ?>

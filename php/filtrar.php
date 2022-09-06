@@ -21,7 +21,8 @@
     }
 
     $result = mysqli_query($conn, $sql);
-
+    
+function dadosFiltrados($result){
     if(mysqli_num_rows($result) < 1){
         echo ('<div class="N_registro"><h2>NENHUM REGISTRO FOI ENCONTRADO!!!<h2></div>');
     }else{
@@ -39,5 +40,6 @@
 <?php
     }
     }
+}
     mysqli_close($conn);
 ?>

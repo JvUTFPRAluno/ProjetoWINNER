@@ -3,8 +3,6 @@
     require_once 'verifica_sessao.php';
 
     verifica_conectado(1);
-    include 'config.php';//inicia o banco de dados
-
 
     //atribui os dados POST as variveis 
     $id = $_POST['id'];

@@ -1,7 +1,7 @@
-<?php?>
+<?php function filtrodados($caminho, $titulo, $btn){?>
 <div class="filtro">
-    <form class="filtrar" method="POST" action="php/filtrar.php">
-        <h2>Filtro</h2>
+    <form class="filtrar" method="POST" action="<?php echo($caminho); ?>">
+        <h2><?php echo $titulo ?></h2>
         <div>
         <h4>Setor</h4>
         <select name="setorFiltro" required>
@@ -25,8 +25,9 @@
             <label>Data Final</label>
             <input type="date" name="intDataFim">
         </div>
-        <input type="submit" value="filtrar">
+        <input type="submit" value="<?php echo $btn?>">
     </form>
 </div>
-    
-<?php?>
+<?php
+    }
+?>

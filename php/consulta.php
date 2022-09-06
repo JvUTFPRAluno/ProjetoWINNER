@@ -47,7 +47,8 @@ function concluidos(){
         <td><?php echo $row['linhaProducao'] ?></td>
         <td><?php echo $row['descricaoRequisicao'] ?></td>
         <td><a href="editar.php?id=<?php echo $row['id'] ?>" <?php mostra_botao(1) ?>>editar</a>
-        <a href="php/excluir.php?id=<?php echo $row['id']?>" <?php mostra_botao(2) ?>>excluir</a></td>
+        <a href="php/excluir.php?id=<?php echo $row['id']?>" <?php mostra_botao(2) ?>>excluir</a>
+        <a href="imprimirReq.php?id=<?php echo $row['id']?>">imprimir</a></td>
     </tr>
 <?php
     }

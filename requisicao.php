@@ -18,7 +18,7 @@
 	require_once 'php/mostra_dados_req.php';
 ?>
 <div class="OS">
-    <form class="relatorio" method="POST" action="php/envia_requisicao.php">
+    <form class="relatorio" id="relatorio" method="POST" action="php/envia_requisicao.php">
             <input type="text" name="id" value="<?php echo $linha['id']; ?>" style="display: none;";>
 			<div class="Tipo_manutencao">
 				<h2>Tipo de manutenção</h2>
@@ -36,8 +36,8 @@
 				<h2>Terceiros</h2>
 					<div>
 						<label>Manutenção realizada com 3°</label>
-						<input type="radio" value="sim_t" name="opt"><label>sim</label>
-						<input type="radio" value="nao_t" name="opt"><label>não</label>
+						<input type="radio" value="sim_t" id="sim_t" name="opt" checked><label>sim</label>
+						<input type="radio" value="nao_t" id="nao_t" name="opt"><label>não</label>
 					</div>
 					<div>
 						<label>Empresa/ Profissional</label>
@@ -61,7 +61,7 @@
 				<div class="parada_maquina">
 					<label>Parou a Maquina?</label>
 					<div class="conteiner-parada">
-						<input type="radio" value="sim_p" name="h_parada"><label>Sim</label>
+						<input type="radio" value="sim_p" name="h_parada" checked><label>Sim</label>
 						<input type="radio" value="nao_p" name="h_parada"><label>Não</label>
 						<input type="time" name="tempo_parada" value="00:00">
 					</div><!--conteiner-parada-->
@@ -76,6 +76,8 @@
 				<input type="reset">
 			</div><!--actions-->
 		</form><!--relatorio-->
+		<script scr="js/jquery.js"></script>
+		<script scr="js/scripts.js"></script>
 </div><!--OS-->
 
 <?php include'parts/footer.php';//adiciona o rodapé da pagina?>

@@ -4,6 +4,9 @@
 	require_once 'php/verifica_sessao.php';
 
 	verifica_conectado(1);
+
+	require 'php/filtro.php';
+	filtrodados('php/relatorioCSV.php', 'Relatório','Imprimir');
 ?>
 	<div class="registro-ordens" id="registros_ordens">
 		<table>
