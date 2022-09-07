@@ -20,7 +20,8 @@
 
             //OBS: UTF-8 buga caracteres especiais no excel usar o conversor mb_convert_encoding($[sua variavel], 'UTF-16LE', 'UTF-8')
             $registro = array($linha['id'],$linha['nomeRequisitante'], mb_convert_encoding($linha['setor'], 'UTF-16LE', 'UTF-8'),mb_convert_encoding($linha['linhaProducao'], 'UTF-16LE', 'UTF-8'),
-            $linha['dataRequisicao'],mb_convert_encoding($linha['descricaoRequisicao'], 'UTF-16LE', 'UTF-8'),$linha['nomeManutencao'],$linha['dataInicio'],$linha['dataTermino'],
+            date('d/m/Y H:i', strtotime($linha['dataRequisicao'])),mb_convert_encoding($linha['descricaoRequisicao'], 'UTF-16LE', 'UTF-8'),$linha['nomeManutencao'],
+            date('d/m/Y H:i', strtotime($linha['dataInicio'])),date('d/m/Y H:i',strtotime($linha['dataTermino'])),
             mb_convert_encoding($linha['parteProblema'], 'UTF-16LE', 'UTF-8'),mb_convert_encoding($linha['motivoProblema'], 'UTF-16LE', 'UTF-8'),
             mb_convert_encoding($linha['solucao'], 'UTF-16LE', 'UTF-8'),$linha['tempo_parada'], $status);
 
