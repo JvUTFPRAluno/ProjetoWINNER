@@ -1,16 +1,16 @@
 <?php function filtrodados($caminho, $titulo, $btn){?>
-<div class="filtro">
-    <form class="filtrar" method="POST" action="<?php echo($caminho); ?>">
+<div class="filtro" id="filtro">
+    <form class="filtrar" method="POST" action="<?php echo($caminho); ?>" id="filtro">
         <h2><?php echo $titulo ?></h2>
         <div>
         <h4>Setor</h4>
-        <select name="setorFiltro" required>
+        <select name="setorFiltro" id="setorFiltro" required>
             <option disabled selected>--</option>
             <option value="administrativo">Administrativo</option>
             <option value="Produção">Produção</option>
         </select>
         </div>
-        <div>
+        <div id="linhaProd" style="display: none;">
         <h4>Linha</h4>
         <select name="linhaFiltro">
         <option disabled selected>--</option>

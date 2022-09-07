@@ -31,7 +31,7 @@ function dadosFiltrados($result){
             <tr>
                 <td><?php echo $row['id'] ?></td>
                 <td><?php echo $row['nomeRequisitante'] ?></td>
-                <td><?php echo $row['dataRequisicao'] ?></td>
+                <td><?php echo date('d/m/Y H:i', strtotime($row['dataRequisicao']))?></td>
                 <td><?php echo $row['setor'] ?></td>
                 <td><?php echo $row['linhaProducao'] ?></td>
                 <td><?php echo $row['descricaoRequisicao'] ?></td>
