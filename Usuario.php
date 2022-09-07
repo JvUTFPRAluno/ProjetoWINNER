@@ -1,7 +1,7 @@
 
 <?php include'parts/header.php'?>
 	<section>
-		<form method="post" action="php/salva_requisitante.php">
+		<form method="post" action="php/salva_requisitante.php" id="requisitanteForm">
 			<h2>Formulario de ordem de serviço</h2>
 			<div class="setor">
 				<div><label>Requisitante</label></div>
@@ -9,17 +9,21 @@
 			</div>
 			<div class="setor">
 				<div><label>Setor</label></div>
-				<div><select id="setor" name="setor[]" required>
-					<option disabled selected>Selecione sua linha</option>
-					<option value="Produção">Produção</option>
-					<option value="Administrativo">Administrativo</option>
-				</select></div>
+				<div>
+					<select id="setorReq" name="setor[]" required>
+						<option disabled selected>Selecione sua linha</option>
+						<option value="Produção">Produção</option>
+						<option value="Administrativo">Administrativo</option>
+					</select>
+				</div>
+				<div id="linhaReq" style="display: none">
 				<div><label>Linha</label></div>
-				<div><select id="linha" name="linha[]" required>
-					<option disabled selected >Selecione sua linha</option>
-					<option value="01-Arla antiga">01-Arla antiga</option>
-					<option value="12-Terco 1">12-Terco 1</option>
-				</select></div>
+					<select name="linha[]" required>
+						<option disabled selected >Selecione sua linha</option>
+						<option value="01-Arla antiga">01-Arla antiga</option>
+						<option value="12-Terco 1">12-Terco 1</option>
+					</select>
+				</div>
 			</div>
 			<div class="setor">
 				<div><label>Motivo da requisição(Descrição da ocorrencia)</label></div>
