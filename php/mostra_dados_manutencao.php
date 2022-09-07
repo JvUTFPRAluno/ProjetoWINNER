@@ -11,10 +11,13 @@
     $result = mysqli_query($conn, $sql);//executa a query e adiciona a varivel '$result' 
     $linha = mysqli_fetch_array($result);//adiciona os dados da variavel '$result' na varivel '$linha' como um array 
 
+    $dataI= explode(" ",$linha['dataInicio']);
+    $dataT= explode(" ",$linha['dataTermino']);
+
     //adiciona os dados ao formulario para que possam ser editados
 ?>
 <div class="OS">
-<form class="relatorio" method="POST" action="php/edita_requisicao.php">
+<form class="relatorio" method="POST" action="php/edita_requisicao.php" id="relatorio">
         <input type="text" name="id" value="<?php echo $linha['id']; ?>" style="display: none;";>
         <div class="Tipo_manutencao">
             <h2>Tipo de manutenção</h2>
@@ -31,14 +34,27 @@
             <h2>Terceiros</h2>
                 <div>
                     <label>Manutenção realizada com 3°</label>
-                    <input type="radio" value="sim_t" name="opt"><label>sim</label>
-                    <input type="radio" value="nao_t" name="opt"><label>não</label>
+                    <input type="radio" id="sim_t" value="sim_t" name="opt" <?php $linha['nomeTerceiros']!=""?print('checked'):''?>><label>sim</label>
+                    <input type="radio" id="nao_t" value="nao_t" name="opt" <?php $linha['nomeTerceiros']==""?print('checked'):''?>><label>não</label>
                 </div>
-                <div>
+                <div id="campoTerceiros">
                     <label>Empresa/ Profissional</label>
-                    <input type="text" name="terceiros" value="<?php echo $linha['nomeTerceiros']?>">
+                    <input type="text" name="terceiros" id="terceiros" value="<?php echo $linha['nomeTerceiros']?>">
                 </div>
         </div><!--terceiros-->
+        <div class="tempoRequisicao">
+            <h2>Intervalo de Tempo</h2>
+            <div>
+                <h4>data de inicio</h4>
+                <input type="date" name="dataInicio" value="<?php echo($dataI[0])?>">
+                <input type="time" name="horaInicio" value="<?php echo($dataI[1])?>">
+            </div>
+            <div>
+                <h4>data de termino</h4>
+                <input type="date" name="dataTermino" value="<?php echo($dataT[0])?>">
+                <input type="time" name="horaTermino" value="<?php echo($dataT[1])?>">
+            </div>
+		</div><!--tempoRequisicao-->
         <div class="relatorio_tecnico">
             <h2>Relatório Técnico</h2>
             <div class="topico">
@@ -56,9 +72,9 @@
             <div class="parada_maquina">
                 <label>Parou a Maquina?</label>
                 <div class="conteiner-parada">
-                    <input type="radio" value="sim_p" name="h_parada"><label>Sim</label>
-                    <input type="radio" value="nao_p" name="h_parada"><label>Não</label>
-                    <input type="time" name="tempo_parada" value="<?php echo $linha['tempo_parada']?>">
+                    <input type="radio" id="sim_p" name="h_parada" value="sim_p" <?php $linha['tempo_parada']!="00:00:00"?print('checked'):''?>><label>Sim</label>
+                    <input type="radio" id="nao_p" name="h_parada" value="nao_p" <?php $linha['tempo_parada']=="00:00:00"?print('checked'):''?>><label>Não</label>
+                    <input type="time" id="tempo_parada" name="tempo_parada" value="<?php echo $linha['tempo_parada']?>">
                 </div><!--conteiner-parada-->
             </div>
         </div><!--relatorio_tecnico-->
@@ -72,7 +88,5 @@
         </div><!--actions-->
     </form><!--relatorio-->
 </div><!--OS-->
-<script scr="js/scripts.js"></script>
-<script scr="js/scripts.js"></script>
 <?php
 ?>

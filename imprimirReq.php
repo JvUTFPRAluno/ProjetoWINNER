@@ -31,14 +31,14 @@
             <p><b>Requisitante:</b> '.$linha['nomeRequisitante'].'</p>
             <p><b>Setor:</b> '.$linha['setor'].'</p>
             <p><b>Linha de Produção:</b> '.$linha['linhaProducao'].'</p>
-            <p><b>Data:</b> '.$linha['dataRequisicao'].'</p>
+            <p><b>Data:</b> '.date('d/m/Y H:i', strtotime($linha['dataRequisicao'])).'</p>
             <p><b>Motivo da requisição:</b> '.$linha['descricaoRequisicao'].'</p>
     
             <h2>Relatório do tecnico</h2>
             <p><b>Tecnico:</b> '.$linha['nomeManutencao'].'</p>
             <p><b>Parte do equipamento:</b> '.$linha['parteProblema'].'</p>
             <p><b>Problema:</b> '.$linha['motivoProblema'].'</p>
-            <p><b>Tempo de execução:</b> '.$linha['dataInicio'].' a '.$linha['dataTermino'].'</p>
+            <p><b>Tempo de execução:</b> '.date('d/m/Y H:i',strtotime($linha['dataInicio'])).' a '.date('d/m/Y H:i', strtotime($linha['dataTermino'])).'</p>
             <p><b>Tempo de parada de maquina:</b> '.$linha['tempo_parada'].'</p>
         </div><!--center-->
     </body>

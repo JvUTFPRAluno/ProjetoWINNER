@@ -27,8 +27,8 @@
             <h2>Terceiros</h2>
                 <div>
                     <label>Manutenção realizada com 3°</label>
-                    <input type="radio" value="sim_t" name="opt" disabled><label>sim</label>
-                    <input type="radio" value="nao_t" name="opt" disabled checked><label>não</label>
+                    <input type="radio" value="sim_t" name="opt" disabled <?php $linha['nomeTerceiros']!=""?print'checked':''?>><label>sim</label>
+                    <input type="radio" value="nao_t" name="opt" disabled <?php $linha['nomeTerceiros']==""?print'checked':''?>><label>não</label>
                 </div>
                 <div>
                     <label>Empresa/ Profissional</label>
@@ -52,8 +52,8 @@
             <div class="parada_maquina">
                 <label>Parou a Maquina?</label>
                 <div class="conteiner-parada">
-                    <input type="radio" value="sim_p" name="h_parada" disabled><label>Sim</label >
-                    <input type="radio" value="nao_p" name="h_parada" disabled checked><label>Não</label >
+                    <input type="radio" value="sim_p" name="h_parada" disabled <?php $linha['tempo_parada']!="00:00:00"?print'checked':''?>><label>Sim</label >
+                    <input type="radio" value="nao_p" name="h_parada" disabled <?php $linha['tempo_parada']=="00:00:00"?print'checked':''?>><label>Não</label >
                     <input type="time" name="tempo_parada" value="<?php echo $linha['tempo_parada']?>" readonly>
                 </div><!--conteiner-parada-->
             </div>
