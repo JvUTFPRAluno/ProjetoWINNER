@@ -9,11 +9,14 @@
     <tr>
         <td><?php echo $row['id'] ?></td>
         <td><?php echo $row['nomeRequisitante'] ?></td>
-        <td><?php echo $row['dataRequisicao'] ?></td>
+        <td><?php echo date('d/m/Y H:i', strtotime($row['dataRequisicao']))?></td>
         <td><?php echo $row['setor'] ?></td>
         <td><?php echo $row['linhaProducao'] ?></td>
         <td><?php echo $row['descricaoRequisicao'] ?></td>
-        <td><a href="ordem.php?id=<?php echo $row['id'] ?>">Abrir</a></td>
+        <td>
+            <a href="ordem.php?id=<?php echo $row['id'] ?>">Abrir</a>
+            <a href="imprimirReq.php?id=<?php echo $row['id'] ?>">Imprimir</a>
+        </td>
     </tr>
 <?php
     }
