@@ -4,12 +4,12 @@
 	require_once 'php/config.php';
 
 
-	$tempoInicio = date('Y-m-d H:i');
+	//$tempoInicio = date('Y-m-d H:i');
 	$id = $_GET['id'];
 
 
-	$sql = "UPDATE ordemservico SET `dataInicio` = '$tempoInicio' WHERE `id` = '$id'";
-	mysqli_query($conn, $sql);
+	//$sql = "UPDATE ordemservico SET `dataInicio` = '$tempoInicio' WHERE `id` = '$id'";
+	//mysqli_query($conn, $sql);
 
 	verifica_conectado(1);
 ?>
@@ -22,8 +22,8 @@
             <input type="text" name="id" value="<?php echo $linha['id']; ?>" style="display: none;";>
 			<div class="Tipo_manutencao">
 				<h2>Tipo de manutenção</h2>
-				<select name="tipo_manutencao[]"required>
-					<option value='' disabled selected>--</option>
+				<select name="tipo_manutencao[]" id="tManutencao" required>
+					<option value="" disabled selected>--</option>
 					<option value="C. emergencial">C. emergencial</option>
 					<option value="C. programada">C. programada</option>
 					<option value="Ajuste operacional">Ajuste operacional</option>
@@ -39,11 +39,24 @@
 						<input type="radio" value="sim_t" id="sim_t" name="opt" checked><label>sim</label>
 						<input type="radio" value="nao_t" id="nao_t" name="opt"><label>não</label>
 					</div>
-					<div>
+					<div id="campoTerceiros">
 						<label>Empresa/ Profissional</label>
-						<input type="text" name="terceiros">
+						<input type="text" name="terceiros" id="terceiros">
 					</div>
 			</div><!--terceiros-->
+			<div class="tempoRequisicao">
+				<h2>Intervalo de Tempo</h2>
+				<div>
+				<h4>data de inicio</h4>
+					<input type="date" name="dataInicio">
+					<input type="time" name="horaInicio">
+				</div>
+				<div>
+				<h4>data de termino</h4>
+					<input type="date" name="dataTermino">
+					<input type="time" name="horaTermino">
+				</div>	
+			</div>
 			<div class="relatorio_tecnico">
 				<h2>Relatório Técnico</h2>
 				<div class="topico">
@@ -61,9 +74,9 @@
 				<div class="parada_maquina">
 					<label>Parou a Maquina?</label>
 					<div class="conteiner-parada">
-						<input type="radio" value="sim_p" name="h_parada" checked><label>Sim</label>
-						<input type="radio" value="nao_p" name="h_parada"><label>Não</label>
-						<input type="time" name="tempo_parada" value="00:00">
+						<input type="radio" value="sim_p" id="sim_p" name="h_parada" checked><label>Sim</label>
+						<input type="radio" value="nao_p" id="nao_p" name="h_parada"><label>Não</label>
+						<input type="time" name="tempo_parada" id="tempo_parada" value="00:00">
 					</div><!--conteiner-parada-->
 				</div>
 			</div><!--relatorio_tecnico-->
@@ -76,8 +89,6 @@
 				<input type="reset">
 			</div><!--actions-->
 		</form><!--relatorio-->
-		<script scr="js/jquery.js"></script>
-		<script scr="js/scripts.js"></script>
 </div><!--OS-->
 
 <?php include'parts/footer.php';//adiciona o rodapé da pagina?>
