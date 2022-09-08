@@ -42,7 +42,17 @@ $(function(){
 		apareceLinha('#setorReq','#linhaReq');
 	})
 
+	$('#requisitanteForm').submit(()=>{
+		text = $('#descricao').val();
+		if(/[<>;()\$?:]/i.test(text)){
+			alert('Você está usando algum caractere invalido ( <> , () , $ , ? , ; , : )');
+			return false; 
+		}
+		return true;
+	})
 
+
+	//verificações form relatorio (editar/preenchimento)
     $('#relatorio').submit(()=>{		
 		if($('#sim_t').is(":checked")){
 			if($('#terceiros').val() == ""){
@@ -62,7 +72,23 @@ $(function(){
 				alerta('tipo de manutenção');
 				return false;
 		}
+		if($('#dataInicio').val() == "" | $('#dataTermino').val() == "" | $('#horaInicio').val() == "" | $('#horaTermino').val() == "" ){
+			alert('preencha todo os campos do intervalo de tempo');
+			return false;
+		}
 
+		if($('#dataInicio').val() > $('#dataTermino').val()){
+			alert('O intervalo de tempo está incorreto');
+			return false;
+		}
+
+		if($('#dataInicio').val() == $('#dataTermino').val()){
+			if($('#horaInicio').val() > $('#horaTermino').val()){
+				alert('O intervalo de tempo está incorreto');
+				return false;
+			}
+		}
+	
 		return true;
 	})
 });
