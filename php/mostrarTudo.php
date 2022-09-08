@@ -7,6 +7,9 @@
     $result = mysqli_query($conn, $sql);//executa a query e atribui o valor a variavel '$result'
     $linha = mysqli_fetch_array($result);//atribui os dados da variavel '$result' a variavel '$linha'
 
+    $dataI= explode(" ",$linha['dataInicio']);
+    $dataT= explode(" ",$linha['dataTermino']);
+
     //adiciona os dados de '$linha' a um formulario para que possam ser editados pelo usuario
 ?>
 <div class="OS">
@@ -35,6 +38,19 @@
                     <input type="text" name="terceiros" value="<?php echo $linha['nomeTerceiros']?>" readonly>
                 </div>
         </div><!--terceiros-->
+        <div class="tempoRequisicao">
+            <h2>Intervalo de Tempo</h2>
+            <div>
+                <h4>data de inicio</h4>
+                <input type="date" name="dataInicio" value="<?php echo($dataI[0])?>" readonly>
+                <input type="time" name="horaInicio" value="<?php echo($dataI[1])?>" readonly>
+            </div>
+            <div>
+                <h4>data de termino</h4>
+                <input type="date" name="dataTermino" value="<?php echo($dataT[0])?>" readonly>
+                <input type="time" name="horaTermino" value="<?php echo($dataT[1])?>" readonly>
+            </div>
+		</div><!--tempoRequisicao-->
         <div class="relatorio_tecnico">
             <h2>Relatório Técnico</h2>
             <div class="topico">
