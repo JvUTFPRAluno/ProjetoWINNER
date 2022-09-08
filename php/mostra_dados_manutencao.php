@@ -46,13 +46,13 @@
             <h2>Intervalo de Tempo</h2>
             <div>
                 <h4>data de inicio</h4>
-                <input type="date" name="dataInicio" value="<?php echo($dataI[0])?>">
-                <input type="time" name="horaInicio" value="<?php echo($dataI[1])?>">
+                <input type="date" name="dataInicio" id="dataInicio" value="<?php echo($dataI[0])?>">
+                <input type="time" name="horaInicio" id="horaInicio" value="<?php echo($dataI[1])?>">
             </div>
             <div>
                 <h4>data de termino</h4>
-                <input type="date" name="dataTermino" value="<?php echo($dataT[0])?>">
-                <input type="time" name="horaTermino" value="<?php echo($dataT[1])?>">
+                <input type="date" name="dataTermino" id="dataTermino" value="<?php echo($dataT[0])?>">
+                <input type="time" name="horaTermino" id="horaTermino" value="<?php echo($dataT[1])?>">
             </div>
 		</div><!--tempoRequisicao-->
         <div class="relatorio_tecnico">
