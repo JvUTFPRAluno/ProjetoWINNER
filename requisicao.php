@@ -48,13 +48,13 @@
 				<h2>Intervalo de Tempo</h2>
 				<div>
 				<h4>data de inicio</h4>
-					<input type="date" name="dataInicio">
-					<input type="time" name="horaInicio">
+					<input type="date" name="dataInicio" id="dataInicio">
+					<input type="time" name="horaInicio" id="horaInicio">
 				</div>
 				<div>
 				<h4>data de termino</h4>
-					<input type="date" name="dataTermino">
-					<input type="time" name="horaTermino">
+					<input type="date" name="dataTermino" id="dataTermino">
+					<input type="time" name="horaTermino" id="dataTermino">
 				</div>	
 			</div>
 			<div class="relatorio_tecnico">
@@ -91,4 +91,6 @@
 		</form><!--relatorio-->
 </div><!--OS-->
 
-<?php include'parts/footer.php';//adiciona o rodapé da pagina?>
+<?php
+	include 'parts/footer.php';//adiciona o rodapé da pagina
+?>

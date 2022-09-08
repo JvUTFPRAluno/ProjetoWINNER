@@ -27,7 +27,7 @@
 			</div>
 			<div class="setor">
 				<div><label>Motivo da requisição(Descrição da ocorrencia)</label></div>
-				<div><textarea name="descricao" id="descricao" placeholder="digite a descrição do problema aqui..."></textarea></div>
+				<div><textarea name="descricao" id="descricao" placeholder="digite a descrição do problema aqui..." ></textarea></div>
 			</div>
 			<div class="setor">
 				<input type="submit" value="enviar">
