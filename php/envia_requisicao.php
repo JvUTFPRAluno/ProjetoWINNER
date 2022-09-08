@@ -25,11 +25,10 @@
     $parada = $_POST['tempo_parada'];
     $solucao = $_POST['solucao'];
 
-
     //echo($solucao);debug
 
     //query que adiciona os dados enviados pelo usuario na solução da ordem de serviço
-    $sql = "UPDATE `ordemservico` SET `tipoManutencao`='$tipo',`nomeManutencao`='$nome',`dataTermino`='$fDataInicio',`dataTermino`='$fDataTermino',
+    $sql = "UPDATE `ordemservico` SET `tipoManutencao`='$tipo',`nomeManutencao`='$nome',`dataInicio`='$fDataInicio',`dataTermino`='$fDataTermino',
     `parteProblema`='$parte',`motivoProblema`='$motivo',`solucao`='$solucao',`tempo_parada`='$parada',`nomeTerceiros`='$terceiros',`concluido`='1' WHERE `id`= '$id'";
     mysqli_query($conn, $sql);//executa a query
 
