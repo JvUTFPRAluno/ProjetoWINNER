@@ -9,7 +9,9 @@
     }
     if(isset($_POST['linhaFiltro'])){
         $linha = $_POST['linhaFiltro'];
-        $sql .= "AND linhaProducao = '$linha'";
+        if($_POST['setorFiltro'] == "Produção"){
+            $sql .= "AND linhaProducao = '$linha'";
+        }
     }
     if(isset($_POST['intDataInicio']) && $_POST['intDataInicio']!= null && isset($_POST['intDataFim']) && $_POST['intDataFim'] != null){
         //verifica se já tem mais uma condição na query e se houver adiciona o AND

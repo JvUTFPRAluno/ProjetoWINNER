@@ -11,7 +11,9 @@
     $descricao = $_POST['descricao'];
     $data = date('Y/m/d H:i');// pega a data da requisição de maneira automatica a partir do envio
 
-    //echo($nome . $descricao .$data . $linha .$setor);
+    if($setor != "Produção"){
+        $linha = '';
+    }
 
     //query que insere os dados do requisitante no banco de dados
     $sql = "INSERT INTO ordemservico(nomeRequisitante,setor,linhaProducao,dataRequisicao,descricaoRequisicao) VALUES ('$nome','$setor','$linha','$data','$descricao')";
