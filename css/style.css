@@ -18,6 +18,7 @@
 
 /*header*/
 header{
+	position: relative;
 	background-color: black;
 	color: white;
 	border-bottom: 2px solid red;
@@ -53,13 +54,14 @@ header .top-menu{
 .conteiner-banner{
 	box-sizing: border-box;
 	width: 100%;
-	height: 500px;
+	height: calc(100vh - 115px);
 	background-image: url('../img/banner.jpg');
 	background-position: center;
 	background-size:cover;
 }
 
 .overlay{
+	padding:15% 50px;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0,0.6);
@@ -74,6 +76,16 @@ header .top-menu{
 .conteiner-content{
 	width: 85%;
 	margin: 0 auto;
+}
+
+.overlay > div > h2{
+	font-size: 50px;
+	color: white;
+}
+
+.overlay > div > p{
+	font-size: 20px;
+	color: white;
 }
 
 /*formulario*/
@@ -384,70 +396,8 @@ form.filtrar input[type=submit]{
 }
 
 /**************/
-/*teste*/
-.item1{
-	grid-area: header;
-	background-color: black;
-}
-
-.item1 > .top-menu{
-	display: flex;
-	padding: 10px 0;
-}
-
-.item1 > .top-menu  a{
-	padding: 30px 20px; 
-}
-
-.main{
-	width: 70%;
-	max-width: 900px;
-	grid-area: main;
-	margin: 0 auto;
-}
-
-.right{
-	width: 15%;
-	height: 300px;
-	grid-area: right;
-	background-color: white;
-}
-
-.left{
-	background-color: red;
-	width: 15%;
-	grid-area: left;
-	background-color: white;
-}
 
 
-.banner{
-	width: 100%;
-	height: 90vh;
-	background-position: center;
-	background-size:cover;
-	grid-area: banner;
-	background-repeat: no-repeat;
-	background-image: url('../img/banner.jpg');
-}
-
-.item4{
-	grid-area: footer;
-	background-color: yellow;
-}
-
-.center-teste{
-	width: 100%;
-	height: 100%;
-	display: grid;
-	grid-template-areas: 
-		'header header header header header header'
-		'banner banner banner banner banner banner'
-		'banner banner banner banner banner banner'
-		'left main main main main right'
-		'left main main main main right'
-		'footer footer footer footer footer footer';
-}
 
 
 
