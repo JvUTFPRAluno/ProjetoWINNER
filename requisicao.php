@@ -41,7 +41,7 @@
 					</div>
 					<div id="campoTerceiros">
 						<label>Empresa/ Profissional</label>
-						<input type="text" name="terceiros" id="terceiros">
+						<input type="text" name="terceiros" id="terceiros" autocomplete="off">
 					</div>
 			</div><!--terceiros-->
 			<div class="tempoRequisicao">
@@ -54,22 +54,22 @@
 				<div>
 				<h4>data de termino</h4>
 					<input type="date" name="dataTermino" id="dataTermino">
-					<input type="time" name="horaTermino" id="dataTermino">
+					<input type="time" name="horaTermino" id="horaTermino">
 				</div>	
 			</div>
 			<div class="relatorio_tecnico">
 				<h2>Relatório Técnico</h2>
 				<div class="topico">
 					<label>Nome do(s) Técnico(s)</label>
-					<input type="text" name="nome_funcionario" required>
+					<input type="text" name="nome_funcionario" required autocomplete="off">
 				</div>
 				<div class="topico">
 					<label>Equipamento</label>
-					<input type="text" name="equipamento" required>
+					<input type="text" name="equipamento" required autocomplete="off">
 				</div>
 				<div class="topico">
 					<label>Motivo da falha</label>
-					<input type="text" name="motivo_falha" required="required">
+					<input type="text" name="motivo_falha" required="required" autocomplete="off">
 				</div>
 				<div class="parada_maquina">
 					<label>Parou a Maquina?</label>
