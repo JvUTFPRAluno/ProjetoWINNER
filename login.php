@@ -25,5 +25,8 @@
         </form> 
     </div><!--login-->
 <?php
+    if($_GET['exp'] == 1){
+        echo('<script>alert("Codigo e/ou Senha incorretos!!!");</script>');
+    }
     include 'parts/footer.php';
 ?>
