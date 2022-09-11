@@ -9,6 +9,7 @@
     $dataInicio = $_POST['dataInicio']." ".$_POST['horaInicio'];
     $dataTermino = $_POST['dataTermino']." ".$_POST['horaTermino'];
 
+    //data formatada
     $fDataInicio = date('Y/m/d H:i', strtotime($dataInicio));
     $fDataTermino = date('Y/m/d H:i', strtotime($dataTermino));
 
