@@ -16,7 +16,7 @@
 
     if(mysqli_num_rows($result) != 1){
         print('<script>alert("Codigo e/ou Senha incorretos!!!");</script>');
-        header("Location: ../login.php");
+        header("Location: ../login.php?exp=1");
         exit;
     }
 
