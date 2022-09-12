@@ -4,7 +4,11 @@
 
     if(mysqli_num_rows($result) > 0){
         $delimitador = ';';//vai delimitar as colunas no arquivo csv
-        $nomeArquivo = "Relatorio" . date('d-m-Y'). ".csv";//nome do arquivo
+        $nomeArquivo = $_POST['setorFiltro'];//nome do arquivo
+        if(isset($_POST['linhaFiltro'])){
+            $nomeArquivo.= $_POST['linhaFiltro'];
+        }
+        $nomeArquivo.= date('d-m-Y'). ".csv";
 
         $f = fopen ('php://memory', 'w');//cria um arquivo ponteiro
 
@@ -37,6 +41,6 @@
         //limpa toda a data sobreçalente do arquivo ponteiro
         fpassthru($f);
     }
-    //header("Location: ../ordens.php");
+    header("Location: ../ordens.php?no=1");
     exit;
 ?>
