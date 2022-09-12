@@ -42,4 +42,9 @@
 			?>
 		</table>
 	</div><!--registro-ordens-->
-<?php include'parts/footer.php'?>
+<?php 
+	if(isset($_GET['no'])){
+		echo('<script>alert("nenhum registro foi encontrado!")</script>');
+	}
+	include 'parts/footer.php';
+?>
