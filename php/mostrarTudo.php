@@ -3,7 +3,7 @@
 
     $id = $_GET['id'];//pega o id da ordem de serviço
 
-    $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";//query que pega os dados onde a coluna id='$id'
+    $sql = "SELECT * FROM `relatoriotecnico` WHERE id_requisicao = $id LIMIT 1";//query que pega os dados onde a coluna id='$id'
     $result = mysqli_query($conn, $sql);//executa a query e atribui o valor a variavel '$result'
     $linha = mysqli_fetch_array($result);//atribui os dados da variavel '$result' a variavel '$linha'
 
@@ -68,9 +68,9 @@
             <div class="parada_maquina">
                 <label>Parou a Maquina?</label>
                 <div class="conteiner-parada">
-                    <input type="radio" value="sim_p" name="h_parada" disabled <?php $linha['tempo_parada']!="00:00:00"?print'checked':''?>><label>Sim</label >
-                    <input type="radio" value="nao_p" name="h_parada" disabled <?php $linha['tempo_parada']=="00:00:00"?print'checked':''?>><label>Não</label >
-                    <input type="time" name="tempo_parada" value="<?php echo $linha['tempo_parada']?>" readonly>
+                    <input type="radio" value="sim_p" name="h_parada" disabled <?php $linha['tempoParada']!="00:00:00"?print'checked':''?>><label>Sim</label >
+                    <input type="radio" value="nao_p" name="h_parada" disabled <?php $linha['tempoParada']=="00:00:00"?print'checked':''?>><label>Não</label >
+                    <input type="time" name="tempo_parada" value="<?php echo $linha['tempoParada']?>" readonly>
                 </div><!--conteiner-parada-->
             </div>
         </div><!--relatorio_tecnico-->

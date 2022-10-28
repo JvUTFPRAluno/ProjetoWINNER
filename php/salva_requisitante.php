@@ -16,7 +16,7 @@
     }
 
     //query que insere os dados do requisitante no banco de dados
-    $sql = "INSERT INTO ordemservico(nomeRequisitante,setor,linhaProducao,dataRequisicao,descricaoRequisicao) VALUES ('$nome','$setor','$linha','$data','$descricao')";
+    $sql = "INSERT INTO ordemservico(nomeRequisitante,setor,linhaProducao,dataRequisicao,descricaoRequisicao, concluido, id_relatorioTecnico) VALUES ('$nome','$setor','$linha','$data','$descricao', 0, null)";
     mysqli_query($conn, $sql);//executa a query
 
     mysqli_close($conn);//fecha o banco de dados

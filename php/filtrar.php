@@ -3,6 +3,7 @@
 
     $sql = "SELECT * FROM `ordemservico` WHERE ";
 
+
     if(isset($_POST['setorFiltro'])){
         $setor = $_POST['setorFiltro'];
         $sql.= "setor = '$setor'";
@@ -28,6 +29,7 @@ function dadosFiltrados($result){
     if(mysqli_num_rows($result) < 1){
         echo ('<div class="N_registro"><h2>NENHUM REGISTRO FOI ENCONTRADO!!!<h2></div>');
     }else{
+
         while($row = mysqli_fetch_array($result)){
 ?>
             <tr>
@@ -43,5 +45,5 @@ function dadosFiltrados($result){
     }
     }
 }
-    mysqli_close($conn);
+    //mysqli_close($conn);
 ?>

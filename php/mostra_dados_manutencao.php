@@ -2,12 +2,8 @@
     include 'config.php';//inicia o banco de dados
 
     $id = $_GET['id'];//pega o id via GET
-
-    $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-    $linha = mysqli_fetch_array($result);
     
-    $sql = "SELECT * FROM `ordemservico` WHERE id = $id LIMIT 1";//query que pega os dados onde a coluna id = '$id'
+    $sql = "SELECT * FROM `relatoriotecnico` WHERE id_requisicao = $id LIMIT 1";//query que pega os dados onde a coluna id = '$id'
     $result = mysqli_query($conn, $sql);//executa a query e adiciona a varivel '$result' 
     $linha = mysqli_fetch_array($result);//adiciona os dados da variavel '$result' na varivel '$linha' como um array 
 
@@ -72,9 +68,9 @@
             <div class="parada_maquina">
                 <label>Parou a Maquina?</label>
                 <div class="conteiner-parada">
-                    <input type="radio" id="sim_p" name="h_parada" value="sim_p" <?php $linha['tempo_parada']!="00:00:00"?print('checked'):''?>><label>Sim</label>
-                    <input type="radio" id="nao_p" name="h_parada" value="nao_p" <?php $linha['tempo_parada']=="00:00:00"?print('checked'):''?>><label>Não</label>
-                    <input type="time" id="tempo_parada" name="tempo_parada" value="<?php echo $linha['tempo_parada']?>">
+                    <input type="radio" id="sim_p" name="h_parada" value="sim_p" <?php $linha['tempoParada']!="00:00:00"?print('checked'):''?>><label>Sim</label>
+                    <input type="radio" id="nao_p" name="h_parada" value="nao_p" <?php $linha['tempoParada']=="00:00:00"?print('checked'):''?>><label>Não</label>
+                    <input type="time" id="tempo_parada" name="tempo_parada" value="<?php echo $linha['tempoParada']?>">
                 </div><!--conteiner-parada-->
             </div>
         </div><!--relatorio_tecnico-->

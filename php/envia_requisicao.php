@@ -27,11 +27,19 @@
     $solucao = $_POST['solucao'];
 
     //echo($solucao);debug
-
+    
     //query que adiciona os dados enviados pelo usuario na solução da ordem de serviço
-    $sql = "UPDATE `ordemservico` SET `tipoManutencao`='$tipo',`nomeManutencao`='$nome',`dataInicio`='$fDataInicio',`dataTermino`='$fDataTermino',
-    `parteProblema`='$parte',`motivoProblema`='$motivo',`solucao`='$solucao',`tempo_parada`='$parada',`nomeTerceiros`='$terceiros',`concluido`='1' WHERE `id`= '$id'";
+    $sql = "INSERT INTO relatoriotecnico (id_requisicao, tipoManutencao,nomeManutencao,dataInicio,dataTermino,parteProblema,motivoProblema,solucao,tempoParada,nomeTerceiros) VALUES ('$id','$tipo','$nome','$fDataInicio','$fDataTermino','$parte','$motivo','$solucao','$parada','$terceiros')";
     mysqli_query($conn, $sql);//executa a query
+
+    //pega o id do relatorio tecnico
+    $id_rt = "SELECT id FROM `relatoriotecnico` WHERE id_requisicao = '$id'";
+    $result = mysqli_query($conn, $id_rt);//executa a query
+    $linha = mysqli_fetch_array($result);//transforma o resultado em uma array
+
+    //atualiza o id_relatorioTecnico e tambem o status de concluido
+    $sql2 = "UPDATE `ordemservico` SET `concluido`= 1, `id_relatorioTecnico`= '$linha[0]' WHERE id = '$id'";
+    mysqli_query($conn, $sql2);//executa a query
 
     mysqli_close($conn);//fecha o banco de dados
     header('Location: '. '../ordens.php');//redireciona para ordens

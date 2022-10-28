@@ -20,9 +20,9 @@
     $fDataTermino = date('Y/m/d H:i', strtotime($dataTermino));
     
     //query que atualiza os dados mudados pelo usuario no editar.php
-    $sql = "UPDATE `ordemservico` SET `tipoManutencao`='$tipo',`nomeTerceiros`='$terceiros',`nomeManutencao`='$nome',`parteProblema`='$parte',
-    `dataInicio`='$fDataInicio',`dataTermino`='$fDataTermino',`motivoProblema`='$motivo',`solucao`='$solucao',`tempo_parada`='$parada',
-    `nomeTerceiros`='$terceros',`concluido`='1' WHERE `id`='$id'";
+    $sql = "UPDATE `relatoriotecnico` SET `tipoManutencao`='$tipo',`nomeTerceiros`='$terceiros',`nomeManutencao`='$nome',`parteProblema`='$parte',
+    `dataInicio`='$fDataInicio',`dataTermino`='$fDataTermino',`motivoProblema`='$motivo',`solucao`='$solucao',`tempoParada`='$parada',
+    `nomeTerceiros`='$terceiros' WHERE `id`='$id'";
     mysqli_query($conn, $sql);//executa a query
 
     mysqli_close($conn);// fecha o banco de dados

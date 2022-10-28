@@ -19,15 +19,19 @@
 
         while($linha = mysqli_fetch_array($result)){//passa cada linha da array para uma variavel e a transforma em um vetor
 
+            $ids = $linha['id'];
+            $dados2 = "SELECT * FROM relatoriotecnico WHERE id_requisicao = '$ids' LIMIT 1";
+            $linha2 = mysqli_fetch_array(mysqli_query($conn, $dados2));
+
             //as partes do vetor são passadas para ordem correta em outro vetor chamado $registro
             $status = ($linha['concluido']== 1)?'concluido':'requisitado';
 
             //OBS: UTF-8 buga caracteres especiais no excel usar o conversor mb_convert_encoding($[sua variavel], 'UTF-16LE', 'UTF-8')
             $registro = array($linha['id'],$linha['nomeRequisitante'], mb_convert_encoding($linha['setor'], 'UTF-16LE', 'UTF-8'),mb_convert_encoding($linha['linhaProducao'], 'UTF-16LE', 'UTF-8'),
-            date('d/m/Y H:i', strtotime($linha['dataRequisicao'])),mb_convert_encoding($linha['descricaoRequisicao'], 'UTF-16LE', 'UTF-8'),$linha['nomeManutencao'],
-            date('d/m/Y H:i', strtotime($linha['dataInicio'])),date('d/m/Y H:i',strtotime($linha['dataTermino'])),
-            mb_convert_encoding($linha['parteProblema'], 'UTF-16LE', 'UTF-8'),mb_convert_encoding($linha['motivoProblema'], 'UTF-16LE', 'UTF-8'),
-            mb_convert_encoding($linha['solucao'], 'UTF-16LE', 'UTF-8'),$linha['tempo_parada'], $status);
+            date('d/m/Y H:i', strtotime($linha['dataRequisicao'])),mb_convert_encoding($linha['descricaoRequisicao'], 'UTF-16LE', 'UTF-8'),$linha2['nomeManutencao'],
+            date('d/m/Y H:i', strtotime($linha2['dataInicio'])),date('d/m/Y H:i',strtotime($linha2['dataTermino'])),
+            mb_convert_encoding($linha2['parteProblema'], 'UTF-16LE', 'UTF-8'),mb_convert_encoding($linha2['motivoProblema'], 'UTF-16LE', 'UTF-8'),
+            mb_convert_encoding($linha2['solucao'], 'UTF-16LE', 'UTF-8'),$linha2['tempoParada'], $status);
 
             fputcsv($f,$registro,$delimitador);//adiciona as linhas ao arquivo com o delimitador
         }
@@ -41,6 +45,7 @@
         //limpa toda a data sobreçalente do arquivo ponteiro
         fpassthru($f);
     }
+    mysqli_close($conn);
     header("Location: ../ordens.php?no=1");
     exit;
 ?>
