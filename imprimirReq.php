@@ -9,6 +9,9 @@
     $result = mysqli_query($conn, $sql);//executa a query e adiciona a varivel '$result' 
     $linha = mysqli_fetch_array($result);//adiciona os dados da variavel '$result' na varivel '$linha' como um array
 
+    $sql2 = "SELECT * FROM `relatoriotecnico` WHERE id_requisicao = $id LIMIT 1";//query que pega os dados onde a coluna id_requisicao = '$id'
+    $linha2 = mysqli_fetch_array(mysqli_query($conn, $sql2));
+
     $pdf = new Dompdf;
 
     $pdf->loadHtml('<!DOCTYPE html>
@@ -35,11 +38,11 @@
             <p><b>Motivo da requisição:</b> '.$linha['descricaoRequisicao'].'</p>
     
             <h2>Relatório do tecnico</h2>
-            <p><b>Tecnico:</b> '.$linha['nomeManutencao'].'</p>
-            <p><b>Parte do equipamento:</b> '.$linha['parteProblema'].'</p>
-            <p><b>Problema:</b> '.$linha['motivoProblema'].'</p>
-            <p><b>Tempo de execução:</b> '.date('d/m/Y H:i',strtotime($linha['dataInicio'])).' a '.date('d/m/Y H:i', strtotime($linha['dataTermino'])).'</p>
-            <p><b>Tempo de parada de maquina:</b> '.$linha['tempo_parada'].'</p>
+            <p><b>Tecnico:</b> '.$linha2['nomeManutencao'].'</p>
+            <p><b>Parte do equipamento:</b> '.$linha2['parteProblema'].'</p>
+            <p><b>Problema:</b> '.$linha2['motivoProblema'].'</p>
+            <p><b>Tempo de execução:</b> '.date('d/m/Y H:i',strtotime($linha2['dataInicio'])).' a '.date('d/m/Y H:i', strtotime($linha2['dataTermino'])).'</p>
+            <p><b>Tempo de parada de maquina:</b> '.$linha2['tempoParada'].'</p>
         </div><!--center-->
     </body>
     </html>');
